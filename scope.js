@@ -37,6 +37,7 @@ console.log(IMMUTABLE_STRING);
 
 // this prints undefined ?????????
 (function () {
+
   var foo = 1;
   function bar() {
     if (false) {
@@ -45,7 +46,20 @@ console.log(IMMUTABLE_STRING);
     console.log("The value is " + foo);
   }
   bar();
+
 })();
+
+// it prints undefined because this code is interpreted as follows
+(function()){
+  var foo = 1;
+  function bar () {
+    var foo;
+    if (false) {
+      foo = 10;
+    }
+    console.log(foo);
+  }
+}
 
 // ES6 Let
 (function () {
