@@ -15,13 +15,13 @@ console.log(">>>>>>>>>>>>>>>>> SCOPE >>>>>>>>>>>>>>>>>>>>>>>>>");
 //console.log(letVariable);
 console.log(varVariable);
 
-// Allowed 
+// Allowed
 var string = "Hello";
 var string = "World";
 
 console.log(string);
 
-// Forbidden 
+// Forbidden
 let letString = "Hello";
 // An error is thrown, variable already defined
 //let letString = "World";
@@ -50,8 +50,8 @@ console.log(IMMUTABLE_STRING);
 })();
 
 // it prints undefined because this code is interpreted as follows
-(function()){
-  var foo = 1;
+(function() {
+  var foo = 1 ;
   function bar () {
     var foo;
     if (false) {
@@ -59,7 +59,7 @@ console.log(IMMUTABLE_STRING);
     }
     console.log(foo);
   }
-}
+})();
 
 // ES6 Let
 (function () {
